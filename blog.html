@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstrosoftTech Blog - Insights & Innovations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/astrosoft-logo.png" alt="AstrosoftTech Logo">
+                </a>
+                
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="careers.html" class="nav-link">Careers</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <img src="images/astrosoft-logo.png" alt="AstrosoftTech Logo">
+            <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+            <a href="careers.html" class="mobile-nav-link">Careers</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="blog.html" class="mobile-nav-link active">Blog</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="hero-gradient"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">AstrosoftTech</span> Insights
+                </h1>
+                <p class="hero-subtitle">Discover the latest trends, innovations, and thought leadership in software development and technology.</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search articles...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrows">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts Section -->
+    <section class="featured-posts">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured <span class="gradient-text">Articles</span></h2>
+                <p class="section-subtitle">Handpicked content from our experts</p>
+            </div>
+            
+            <div class="featured-slider">
+                <div class="featured-track">
+                    <div class="featured-card">
+                        <div class="post-image">
+                            <img src="images/blog/ai-future.jpg" alt="The Future of AI in Enterprise">
+                            <div class="post-category">AI & ML</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">June 15, 2023</span>
+                                <span class="post-read-time">8 min read</span>
+                            </div>
+                            <h3 class="post-title">The Future of AI in Enterprise: 2023 Trends and Predictions</h3>
+                            <p class="post-excerpt">Exploring how artificial intelligence is transforming business operations and what to expect in the coming year.</p>
+                            <a href="blog-post.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="post-glow"></div>
+                    </div>
+                    
+                    <div class="featured-card">
+                        <div class="post-image">
+                            <img src="images/blog/cloud-security.jpg" alt="Cloud Security Best Practices">
+                            <div class="post-category">Cloud</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">May 28, 2023</span>
+                                <span class="post-read-time">6 min read</span>
+                            </div>
+                            <h3 class="post-title">Cloud Security Best Practices for Modern Applications</h3>
+                            <p class="post-excerpt">Essential strategies to protect your cloud infrastructure and applications from emerging threats.</p>
+                            <a href="blog-post.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="post-glow"></div>
+                    </div>
+                    
+                    <div class="featured-card">
+                        <div class="post-image">
+                            <img src="images/blog/ux-trends.jpg" alt="UX Design Trends">
+                            <div class="post-category">Design</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">April 12, 2023</span>
+                                <span class="post-read-time">5 min read</span>
+                            </div>
+                            <h3 class="post-title">2023 UX Design Trends That Will Dominate Digital Products</h3>
+                            <p class="post-excerpt">Discover the user experience innovations that are shaping the way we interact with technology.</p>
+                            <a href="blog-post.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="post-glow"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots"></div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-grid">
+                <div class="main-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Latest <span class="gradient-text">Articles</span></h2>
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-category="all">All</button>
+                            <button class="filter-tab" data-category="technology">Technology</button>
+                            <button class="filter-tab" data-category="ai">AI & ML</button>
+                            <button class="filter-tab" data-category="development">Development</button>
+                            <button class="filter-tab" data-category="design">Design</button>
+                            <button class="filter-tab" data-category="business">Business</button>
+                        </div>
+                    </div>
+                    
+                    <div class="posts-grid">
+                        <article class="post-card" data-category="technology">
+                            <div class="post-image">
+                                <img src="images/blog/blockchain.jpg" alt="Blockchain Beyond Crypto">
+                                <div class="post-category">Technology</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date">July 5, 2023</span>
+                                    <span class="post-read-time">7 min read</span>
+                                </div>
+                                <h3 class="post-title">Blockchain Beyond Cryptocurrency: Real-World Applications</h3>
+                                <p class="post-excerpt">Exploring how blockchain technology is revolutionizing industries from healthcare to supply chain management.</p>
+                                <a href="blog-post.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="post-hover-effect"></div>
+                        </article>
+                        
+                        <article class="post-card" data-category="ai">
+                            <div class="post-image">
+                                <img src="images/blog/ethics-ai.jpg" alt="Ethics in AI">
+                                <div class="post-category">AI & ML</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date">June 28, 2023</span>
+                                    <span class="post-read-time">9 min read</span>
+                                </div>
+                                <h3 class="post-title">Ethical Considerations in AI Development</h3>
+                                <p class="post-excerpt">Navigating the moral implications of artificial intelligence and building responsible systems.</p>
+                                <a href="blog-post.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="post-hover-effect"></div>
+                        </article>
+                        
+                        <article class="post-card" data-category="development">
+                            <div class="post-image">
+                                <img src="images/blog/serverless.jpg" alt="Serverless Architecture">
+                                <div class="post-category">Development</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date">June 20, 2023</span>
+                                    <span class="post-read-time">6 min read</span>
+                                </div>
+                                <h3 class="post-title">Serverless Architecture: Benefits and Implementation Strategies</h3>
+                                <p class="post-excerpt">How serverless computing is changing the way we build and deploy applications at scale.</p>
+                                <a href="blog-post.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="post-hover-effect"></div>
+                        </article>
+                        
+                        <article class="post-card" data-category="design">
+                            <div class="post-image">
+                                <img src="images/blog/dark-mode.jpg" alt="Dark Mode Design">
+                                <div class="post-category">Design</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date">June 10, 2023</span>
+                                    <span class="post-read-time">5 min read</span>
+                                </div>
+                                <h3 class="post-title">The Science Behind Dark Mode: Why Users Prefer It</h3>
+                                <p class="post-excerpt">Understanding the psychological and physiological benefits of dark interface design.</p>
+                                <a href="blog-post.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="post-hover-effect"></div>
+                        </article>
+                        
+                        <article class="post-card" data-category="business">
+                            <div class="post-image">
+                                <img src="images/blog/remote-work.jpg" alt="Remote Work Tech">
+                                <div class="post-category">Business</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date">May 30, 2023</span>
+                                    <span class="post-read-time">8 min read</span>
+                                </div>
+                                <h3 class="post-title">Building a Successful Remote-First Tech Company</h3>
+                                <p class="post-excerpt">Lessons learned from scaling a distributed engineering team across multiple time zones.</p>
+                                <a href="blog-post.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="post-hover-effect"></div>
+                        </article>
+                        
+                        <article class="post-card" data-category="technology">
+                            <div class="post-image">
+                                <img src="images/blog/quantum.jpg" alt="Quantum Computing">
+                                <div class="post-category">Technology</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date">May 15, 2023</span>
+                                    <span class="post-read-time">10 min read</span>
+                                </div>
+                                <h3 class="post-title">Quantum Computing: Preparing for the Next Tech Revolution</h3>
+                                <p class="post-excerpt">What businesses need to know about the impending quantum computing era.</p>
+                                <a href="blog-post.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="post-hover-effect"></div>
+                        </article>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn">4</button>
+                        <button class="pagination-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul class="category-list">
+                            <li>
+                                <a href="#" data-category="all">
+                                    <span>All Articles</span>
+                                    <span class="category-count">24</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="technology">
+                                    <span>Technology</span>
+                                    <span class="category-count">6</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="ai">
+                                    <span>AI & ML</span>
+                                    <span class="category-count">5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="development">
+                                    <span>Development</span>
+                                    <span class="category-count">4</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="design">
+                                    <span>Design</span>
+                                    <span class="category-count">3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-category="business">
+                                    <span>Business</span>
+                                    <span class="category-count">6</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Popular Tags</h3>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag">#Software</a>
+                            <a href="#" class="tag">#Innovation</a>
+                            <a href="#" class="tag">#WebDev</a>
+                            <a href="#" class="tag">#Cloud</a>
+                            <a href="#" class="tag">#Cybersecurity</a>
+                            <a href="#" class="tag">#Mobile</a>
+                            <a href="#" class="tag">#UX</a>
+                            <a href="#" class="tag">#Startups</a>
+                            <a href="#" class="tag">#IoT</a>
+                            <a href="#" class="tag">#DataScience</a>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Subscribe</h3>
+                        <p class="widget-text">Get the latest articles and news delivered to your inbox.</p>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                        </form>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Featured Video</h3>
+                        <div class="video-widget">
+                            <div class="video-container">
+                                <img src="images/blog/video-thumbnail.jpg" alt="Featured Video">
+                                <button class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <h4 class="video-title">The Future of Web Development in 2023</h4>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2 class="newsletter-title">Stay Updated with Our Insights</h2>
+                    <p class="newsletter-subtitle">Join our newsletter to receive exclusive content and the latest tech trends.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="images/astrosoft-logo.png" alt="AstrosoftTech Logo">
+                    </div>
+                    <p class="footer-about-text">AstrosoftTech is a leading software development company delivering innovative digital solutions since 2011.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-services">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-list">
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#mobile">Mobile App Development</a></li>
+                        <li><a href="services.html#software">Custom Software</a></li>
+                        <li><a href="services.html#ai">AI & ML Solutions</a></li>
+                        <li><a href="services.html#ux">UI/UX Design</a></li>
+                        <li><a href="services.html#cloud">Cloud Solutions</a></li>
+                        <li><a href="services.html#iot">IoT Development</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Tech Park, Silicon Valley, CA 94025</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@astrosofttech.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2023 AstrosoftTech. All Rights Reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Blog Page Specific Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Featured Posts Slider
+            const featuredTrack = document.querySelector('.featured-track');
+            const featuredCards = document.querySelectorAll('.featured-card');
+            const prevBtn = document.querySelector('.slider-prev');
+            const nextBtn = document.querySelector('.slider-next');
+            const dotsContainer = document.querySelector('.slider-dots');
+            
+            let currentIndex = 0;
+            const cardWidth = featuredCards[0].offsetWidth + 30; // width + gap
+            
+            // Create dots
+            featuredCards.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('slider-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+                dotsContainer.appendChild(dot);
+            });
+            
+            function updateSlider() {
+                featuredTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                
+                // Update active dot
+                document.querySelectorAll('.slider-dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            function goToSlide(index) {
+                currentIndex = index;
+                updateSlider();
+            }
+            
+            function nextSlide() {
+                if (currentIndex < featuredCards.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateSlider();
+            }
+            
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = featuredCards.length - 1;
+                }
+                updateSlider();
+            }
+            
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Auto slide
+            let slideInterval = setInterval(nextSlide, 5000);
+            
+            featuredTrack.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            featuredTrack.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+            
+            // Filter posts by category
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const postCards = document.querySelectorAll('.post-card');
+            
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Update active tab
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    
+                    const category = tab.dataset.category;
+                    
+                    // Filter posts
+                    postCards.forEach(card => {
+                        if (category === 'all' || card.dataset.category === category) {
+                            card.style.display = 'block';
+                            gsap.from(card, {
+                                duration: 0.5,
+                                opacity: 0,
+                                y: 20,
+                                ease: "power2.out"
+                            });
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Category list filtering
+            const categoryLinks = document.querySelectorAll('.category-list a');
+            
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const category = link.dataset.category;
+                    
+                    // Find and click corresponding filter tab
+                    filterTabs.forEach(tab => {
+                        if (tab.dataset.category === category) {
+                            tab.click();
+                        }
+                    });
+                });
+            });
+            
+            // Post card hover effects
+            postCards.forEach(card => {
+                const hoverEffect = card.querySelector('.post-hover-effect');
+                
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    hoverEffect.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0,245,255,0.1) 0%, rgba(0,245,255,0) 70%)`;
+                });
+                
+                card.addEventListener('mouseenter', () => {
+                    hoverEffect.style.opacity = '1';
+                    gsap.to(card, {
+                        duration: 0.3,
+                        y: -5,
+                        boxShadow: '0 10px 30px rgba(0, 245, 255, 0.1)',
+                        ease: "power2.out"
+                    });
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    hoverEffect.style.opacity = '0';
+                    gsap.to(card, {
+                        duration: 0.3,
+                        y: 0,
+                        boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)',
+                        ease: "power2.out"
+                    });
+                });
+            });
+            
+            // Featured card hover effects
+            featuredCards.forEach(card => {
+                const glow = card.querySelector('.post-glow');
+                
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0,245,255,0.2) 0%, rgba(0,245,255,0) 70%)`;
+                });
+                
+                card.addEventListener('mouseenter', () => {
+                    glow.style.opacity = '1';
+                    gsap.to(card, {
+                        duration: 0.3,
+                        y: -10,
+                        boxShadow: '0 15px 40px rgba(0, 245, 255, 0.15)',
+                        ease: "power2.out"
+                    });
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    glow.style.opacity = '0';
+                    gsap.to(card, {
+                        duration: 0.3,
+                        y: 0,
+                        boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)',
+                        ease: "power2.out"
+                    });
+                });
+            });
+            
+            // GSAP animations
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Animate hero elements
+            gsap.from('.blog-hero .hero-title, .blog-hero .hero-subtitle', {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                stagger: 0.2,
+                ease: 'power3.out'
+            });
+            
+            gsap.from('.search-bar', {
+                duration: 1,
+                y: 30,
+                opacity: 0,
+                delay: 0.5,
+                ease: 'power3.out'
+            });
+            
+            // Animate featured section
+            gsap.from('.featured-posts .section-header', {
+                scrollTrigger: {
+                    trigger: '.featured-posts',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                ease: 'power3.out'
+            });
+            
+            gsap.from('.featured-card', {
+                scrollTrigger: {
+                    trigger: '.featured-posts',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                },
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: 'power3.out'
+            });
+            
+            // Animate blog posts
+            gsap.utils.toArray('.post-card').forEach((card, i) => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 80%',
+                        toggleActions: 'play none none none'
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    ease: 'power3.out'
+                });
+            });
+            
+            // Animate sidebar widgets
+            gsap.utils.toArray('.sidebar-widget').forEach((widget, i) => {
+                gsap.from(widget, {
+                    scrollTrigger: {
+                        trigger: widget,
+                        start: 'top 80%',
+                        toggleActions: 'play none none none'
+                    },
+                    x: 50,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.2,
+                    ease: 'power3.out'
+                });
+            });
+            
+            // Animate newsletter section
+            gsap.from('.newsletter', {
+                scrollTrigger: {
+                    trigger: '.newsletter',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                },
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: 'power3.out'
+            });
+        });
+    </script>
+</body>
+</html>

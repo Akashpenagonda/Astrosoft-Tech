@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | AstrosoftTech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/astrosoft-logo.png" alt="AstrosoftTech Logo">
+                </a>
+                
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link active">Services</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="careers.html" class="nav-link">Careers</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <img src="images/astrosoft-logo.png" alt="AstrosoftTech Logo">
+            <button class="close-menu">&times;</button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="services.html" class="mobile-nav-link active">Services</a>
+            <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+            <a href="careers.html" class="mobile-nav-link">Careers</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="blog.html" class="mobile-nav-link">Blog</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="particles" id="particles-js-services"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Innovative</span> Digital Solutions
+                </h1>
+                <p class="hero-subtitle">We craft cutting-edge software solutions tailored to your business needs and challenges.</p>
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrows">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="services-grid-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="gradient-text">Core Services</span></h2>
+                <p class="section-subtitle">Comprehensive digital solutions to transform your business</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card" data-service="web">
+                    <div class="service-card-inner">
+                        <div class="service-front">
+                            <div class="service-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="service-title">Custom Software Development</h3>
+                            <p class="service-excerpt">Tailored solutions for your unique business requirements</p>
+                            <div class="service-cta">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="service-back">
+                            <h3>Custom Software Development</h3>
+                            <ul class="service-features">
+                                <li>Enterprise-grade applications</li>
+                                <li>Business process automation</li>
+                                <li>System integration</li>
+                                <li>Scalable architecture</li>
+                                <li>Ongoing support</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card" data-service="mobile">
+                    <div class="service-card-inner">
+                        <div class="service-front">
+                            <div class="service-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3 class="service-title">Mobile App Development</h3>
+                            <p class="service-excerpt">Innovative mobile experiences for iOS and Android</p>
+                            <div class="service-cta">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="service-back">
+                            <h3>Mobile App Development</h3>
+                            <ul class="service-features">
+                                <li>Native iOS & Android apps</li>
+                                <li>Cross-platform solutions</li>
+                                <li>UI/UX focused design</li>
+                                <li>API integration</li>
+                                <li>App store optimization</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card" data-service="web">
+                    <div class="service-card-inner">
+                        <div class="service-front">
+                            <div class="service-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3 class="service-title">Web Development</h3>
+                            <p class="service-excerpt">High-performance websites and web applications</p>
+                            <div class="service-cta">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="service-back">
+                            <h3>Web Development</h3>
+                            <ul class="service-features">
+                                <li>Responsive web design</li>
+                                <li>E-commerce solutions</li>
+                                <li>CMS development</li>
+                                <li>Web portals</li>
+                                <li>Progressive Web Apps</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card" data-service="ai">
+                    <div class="service-card-inner">
+                        <div class="service-front">
+                            <div class="service-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3 class="service-title">AI & ML Solutions</h3>
+                            <p class="service-excerpt">Intelligent systems that learn and adapt</p>
+                            <div class="service-cta">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="service-back">
+                            <h3>AI & ML Solutions</h3>
+                            <ul class="service-features">
+                                <li>Predictive analytics</li>
+                                <li>Natural language processing</li>
+                                <li>Computer vision</li>
+                                <li>Recommendation engines</li>
+                                <li>Process automation</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card" data-service="cloud">
+                    <div class="service-card-inner">
+                        <div class="service-front">
+                            <div class="service-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h3 class="service-title">Cloud Solutions</h3>
+                            <p class="service-excerpt">Scalable infrastructure for your applications</p>
+                            <div class="service-cta">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="service-back">
+                            <h3>Cloud Solutions</h3>
+                            <ul class="service-features">
+                                <li>AWS, Azure & GCP</li>
+                                <li>Cloud migration</li>
+                                <li>Serverless architecture</li>
+                                <li>DevOps automation</li>
+                                <li>Containerization</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card" data-service="ux">
+                    <div class="service-card-inner">
+                        <div class="service-front">
+                            <div class="service-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3 class="service-title">UI/UX Design</h3>
+                            <p class="service-excerpt">Beautiful, intuitive user experiences</p>
+                            <div class="service-cta">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="service-back">
+                            <h3>UI/UX Design</h3>
+                            <ul class="service-features">
+                                <li>User research</li>
+                                <li>Wireframing & prototyping</li>
+                                <li>Interaction design</li>
+                                <li>Design systems</li>
+                                <li>Usability testing</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process Section -->
+    <section class="service-process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="gradient-text">Process</span></h2>
+                <p class="section-subtitle">A proven methodology for delivering exceptional results</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-track">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Discovery</h3>
+                            <p class="step-description">We analyze your requirements and business objectives</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Planning</h3>
+                            <p class="step-description">Creating a detailed roadmap for your project</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Design</h3>
+                            <p class="step-description">Crafting intuitive user interfaces and experiences</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Development</h3>
+                            <p class="step-description">Building robust, scalable solutions</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">05</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Testing</h3>
+                            <p class="step-description">Ensuring quality and performance</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">06</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Deployment</h3>
+                            <p class="step-description">Launching your solution to the world</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="gradient-text">Technology Stack</span></h2>
+                <p class="section-subtitle">We work with cutting-edge technologies to deliver exceptional results</p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Frontend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="C:\Users\penag\Downloads\react-1-logo-pack\react-1-logo-png-transparent.png" alt="React">
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/angular.png" alt="Angular">
+                            <span>Angular</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/vue.png" alt="Vue">
+                            <span>Vue</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/typescript.png" alt="TypeScript">
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Backend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="images/tech/nodejs.png" alt="Node.js">
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/python.png" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/java.png" alt="Java">
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/net.png" alt=".NET">
+                            <span>.NET</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Mobile</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="images/tech/swift.png" alt="Swift">
+                            <span>Swift</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/kotlin.png" alt="Kotlin">
+                            <span>Kotlin</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/flutter.png" alt="Flutter">
+                            <span>Flutter</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/react-native.png" alt="React Native">
+                            <span>React Native</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Database</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <img src="images/tech/mongodb.png" alt="MongoDB">
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/postgresql.png" alt="PostgreSQL">
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/mysql.png" alt="MySQL">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/tech/redis.png" alt="Redis">
+                            <span>Redis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Your Project?</h2>
+                <p class="cta-subtitle">Let's discuss how we can help you achieve your business goals with our innovative solutions.</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                    <a href="portfolio.html" class="btn btn-outline">View Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="images/astrosoft-logo.png" alt="AstrosoftTech Logo">
+                    </div>
+                    <p class="footer-about-text">AstrosoftTech is a leading software development company delivering innovative digital solutions since 2011.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-services">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-list">
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#mobile">Mobile App Development</a></li>
+                        <li><a href="services.html#software">Custom Software</a></li>
+                        <li><a href="services.html#ai">AI & ML Solutions</a></li>
+                        <li><a href="services.html#ux">UI/UX Design</a></li>
+                        <li><a href="services.html#cloud">Cloud Solutions</a></li>
+                        <li><a href="services.html#iot">IoT Development</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Tech Park, Silicon Valley, CA 94025</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@astrosofttech.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2023 AstrosoftTech. All Rights Reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/services-animations.js"></script>
+</body>
+</html>
