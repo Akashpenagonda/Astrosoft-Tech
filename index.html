@@ -11,19 +11,22 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
+    <script>
+        // Apply theme before page renders to prevent flash
+        (function () {
+            const savedTheme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 </head>
-
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    
-                        <img src="images/clients/LOGO.png" alt="AstrosoftTech Logo" class="logo-img">
-
+                    <img src="images/clients/LOGO.png" alt="AstrosoftTech Logo" class="logo-img">
                 </a>
-
                 <div class="nav-links">
                     <a href="index.html" class="nav-link active">Home</a>
                     <a href="services.html" class="nav-link">Services</a>
@@ -45,20 +48,18 @@
                     </button>
                 </div>
             </nav>
-        
         </div>
     </header>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu">
         <div class="mobile-menu-header">
-            <img src="images/astrosoft-logo.png" alt="AstrosoftTech Logo">
+            <img src="images/clients/LOGO.png" alt="AstrosoftTech Logo">
             <button class="close-menu">&times;</button>
         </div>
         <div class="mobile-menu-links">
             <a href="index.html" class="mobile-nav-link active">Home</a>
             <a href="services.html" class="mobile-nav-link">Services</a>
-            <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
             <a href="careers.html" class="mobile-nav-link">Careers</a>
             <a href="about.html" class="mobile-nav-link">About Us</a>
             <a href="blog.html" class="mobile-nav-link">Blog</a>
@@ -73,7 +74,7 @@
             <div class="hero-content">
                 <h1 class="hero-title">
                     <span class="gradient-text">Transform</span> Your Business With<br>
-                    <span class="typing-text"></span>
+                    Innovative Software Solutions
                 </h1>
                 <p class="hero-subtitle">We deliver cutting-edge software solutions that drive growth, efficiency, and
                     innovation for businesses worldwide.</p>
@@ -109,40 +110,40 @@
         </div>
     </section>
 
-  <!-- Clients Section -->
-<section class="clients">
-    <div class="container">
-        <h2 class="section-title">Trusted by <span class="gradient-text">Industry Leaders</span></h2>
-        <p class="section-subtitle">We partner with innovative brands to deliver exceptional digital solutions</p>
-        
-        <div class="client-grid">
-            <div class="client-item">
-                <img src="images/clients/Reserve Logo.png" alt="Reserve Bank">
-            </div>
-            <div class="client-item">
-                <img src="images/clients/american LOGO.png" alt="American Express">
-            </div>
-            <div class="client-item">
-                <img src="images/clients/Fin Logo.png" alt="FinTech Solutions">
-            </div>
-            <div class="client-item">
-                <img src="images/clients/client4.png" alt="Tech Innovators">
-            </div>
-            <div class="client-item">
-                <img src="images/clients/client5.png" alt="Digital Ventures">
-            </div>
-            <div class="client-item">
-                <img src="images/clients/client6.png" alt="Global Systems">
-            </div>
-            <div class="client-item">
-                <img src="images/clients/client7.png" alt="Cloud Networks">
-            </div>
-            <div class="client-item">
-                <img src="images/clients/client8.png" alt="Future Tech">
+    <!-- Clients Section -->
+    <section class="clients">
+        <div class="container">
+            <h2 class="section-title">Trusted by <span class="gradient-text">Industry Leaders</span></h2>
+            <p class="section-subtitle">We partner with innovative brands to deliver exceptional digital solutions</p>
+
+            <div class="client-grid">
+                <div class="client-item">
+                    <img src="images/clients/Reserve Logo.png" alt="Reserve Bank">
+                </div>
+                <div class="client-item">
+                    <img src="images/clients/american LOGO.png" alt="American Express">
+                </div>
+                <div class="client-item">
+                    <img src="images/clients/Fin Logo.png" alt="FinTech Solutions">
+                </div>
+                <div class="client-item">
+                    <img src="images/clients/NIIT.png" alt="Tech Innovators">
+                </div>
+                <div class="client-item">
+                    <img src="images/clients/pluto.png" alt="Digital Ventures">
+                </div>
+                <div class="client-item">
+                    <img src="images/clients/Reserve Logo.png" alt="Global Systems">
+                </div>
+                <div class="client-item">
+                    <img src="images/clients/toyoto.png" alt="Cloud Networks">
+                </div>
+                <div class="client-item">
+                    <img src="images/clients/red box.png" alt="Future Tech">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Services Section -->
     <section class="services">
@@ -204,7 +205,8 @@
         </div>
     </section>
 
-    <!-- Featured Project Section -->
+    <!-- featured-project -->
+
     <section class="featured-project">
         <div class="container">
             <div class="project-content">
@@ -232,16 +234,7 @@
                     <div class="device">
                         <div class="screen">
                             <div class="screen-content">
-                                <img src="images/projects/fintech-dashboard.jpg" alt="FinTech Dashboard">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="device-mockup mobile">
-                    <div class="device">
-                        <div class="screen">
-                            <div class="screen-content">
-                                <img src="images/projects/fintech-mobile.jpg" alt="FinTech Mobile App">
+                                <img src="images/clients/intro.png" alt="FinTech Dashboard">
                             </div>
                         </div>
                     </div>
@@ -357,6 +350,7 @@
         </div>
     </section>
 
+
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
@@ -366,7 +360,7 @@
                     innovative solutions.</p>
                 <div class="cta-actions">
                     <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-                    <a href="portfolio.html" class="btn btn-outline">View Our Work</a>
+                    <a href="portfolio.html" class="btn btn-secondary">View Our Work</a>
                 </div>
             </div>
         </div>
@@ -378,7 +372,7 @@
             <div class="footer-grid">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="images/astrosoft-logo.png" alt="AstrosoftTech Logo">
+                        <img src="images/clients/LOGO.png" alt="AstrosoftTech Logo">
                     </div>
                     <p class="footer-about-text">AstrosoftTech is a leading software development company delivering
                         innovative digital solutions since 2011.</p>
@@ -464,6 +458,17 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+
+
+    <script>
+        // Apply theme before page renders to prevent flash
+        (function () {
+            const savedTheme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
 </body>
 
 </html>

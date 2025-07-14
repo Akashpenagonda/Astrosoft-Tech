@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ease: 'power3.out'
     });
     
+    
     // Animate careers section
     gsap.from('.careers-content', {
         scrollTrigger: {

@@ -15,13 +15,12 @@
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <img src="images/astrosoft-logo.png" alt="AstrosoftTech Logo">
+                    <img src="images/clients/LOGO.png" alt="AstrosoftTech Logo">
                 </a>
                 
                 <div class="nav-links">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="services.html" class="nav-link">Services</a>
-                    <a href="portfolio.html" class="nav-link">Portfolio</a>
                     <a href="careers.html" class="nav-link">Careers</a>
                     <a href="about.html" class="nav-link">About Us</a>
                     <a href="blog.html" class="nav-link active">Blog</a>
@@ -46,13 +45,12 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu">
         <div class="mobile-menu-header">
-            <img src="images/astrosoft-logo.png" alt="AstrosoftTech Logo">
+            <img src="images/clients/LOGO.png" alt="AstrosoftTech Logo">
             <button class="close-menu">&times;</button>
         </div>
         <div class="mobile-menu-links">
             <a href="index.html" class="mobile-nav-link">Home</a>
             <a href="services.html" class="mobile-nav-link">Services</a>
-            <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
             <a href="careers.html" class="mobile-nav-link">Careers</a>
             <a href="about.html" class="mobile-nav-link">About Us</a>
             <a href="blog.html" class="mobile-nav-link active">Blog</a>
@@ -106,7 +104,7 @@
                 <div class="featured-track">
                     <div class="featured-card">
                         <div class="post-image">
-                            <img src="images/blog/ai-future.jpg" alt="The Future of AI in Enterprise">
+                            <img src="images/clients/blog-1.png" alt="The Future of AI in Enterprise">
                             <div class="post-category">AI & ML</div>
                         </div>
                         <div class="post-content">
@@ -123,7 +121,7 @@
                     
                     <div class="featured-card">
                         <div class="post-image">
-                            <img src="images/blog/cloud-security.jpg" alt="Cloud Security Best Practices">
+                            <img src="images/clients/blog 2.png"alt="Cloud Security Best Practices">
                             <div class="post-category">Cloud</div>
                         </div>
                         <div class="post-content">
@@ -140,7 +138,7 @@
                     
                     <div class="featured-card">
                         <div class="post-image">
-                            <img src="images/blog/ux-trends.jpg" alt="UX Design Trends">
+                            <img src="images/clients/blog 3.png" alt="UX Design Trends">
                             <div class="post-category">Design</div>
                         </div>
                         <div class="post-content">
@@ -185,7 +183,7 @@
                     <div class="posts-grid">
                         <article class="post-card" data-category="technology">
                             <div class="post-image">
-                                <img src="images/blog/blockchain.jpg" alt="Blockchain Beyond Crypto">
+                                <img src="images/clients/blog 4.png" alt="Blockchain Beyond Crypto">
                                 <div class="post-category">Technology</div>
                             </div>
                             <div class="post-content">
@@ -404,7 +402,7 @@
             <div class="footer-grid">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">
-                        <img src="images/astrosoft-logo.png" alt="AstrosoftTech Logo">
+                        <img src="images/clients/LOGO.png" alt="AstrosoftTech Logo">
                     </div>
                     <p class="footer-about-text">AstrosoftTech is a leading software development company delivering innovative digital solutions since 2011.</p>
                     <div class="footer-social">
@@ -761,6 +759,12 @@
                 ease: 'power3.out'
             });
         });
+
+        (function() {
+    const savedTheme = localStorage.getItem('theme') || 
+                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
     </script>
 </body>
 </html>

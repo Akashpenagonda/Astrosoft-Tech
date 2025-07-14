@@ -1,61 +1,192 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Theme Toggle - Force dark mode initially
-    const themeToggle = document.querySelector('.theme-toggle');
-    const html = document.documentElement;
-    
-    // Set dark mode as default regardless of preference
-    html.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-    
-    // But still check for user's preference when they toggle
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
+    // ======================
+// Theme Management
+// ======================
+const themeToggle = document.querySelector('.theme-toggle');
+const html = document.documentElement;
+
+// Function to update the toggle icon based on current theme
+function updateToggleIcon(theme) {
+  const moonIcon = themeToggle.querySelector('.fa-moon');
+  const sunIcon = themeToggle.querySelector('.fa-sun');
+  
+  if (theme === 'dark') {
+    moonIcon.style.opacity = '0';
+    moonIcon.style.transform = 'rotate(90deg)';
+    sunIcon.style.opacity = '1';
+    sunIcon.style.transform = 'rotate(0deg)';
+  } else {
+    sunIcon.style.opacity = '0';
+    sunIcon.style.transform = 'rotate(90deg)';
+    moonIcon.style.opacity = '1';
+    moonIcon.style.transform = 'rotate(0deg)';
+  }
+}
+
+// Initialize theme on page load
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme') || 
+                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  
+  // Apply the saved theme
+  html.setAttribute('data-theme', savedTheme);
+  updateToggleIcon(savedTheme);
+  
+  // Reinitialize particles with new theme if needed
+  if (typeof initParticles === 'function') {
+    setTimeout(initParticles, 100);
+  }
+}
+
+// Toggle theme on button click
+themeToggle.addEventListener('click', () => {
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  
+  // Update the theme
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateToggleIcon(newTheme);
+  
+  // Reinitialize particles with new theme if needed
+  if (typeof initParticles === 'function') {
+    setTimeout(initParticles, 100);
+  }
+});
+
+// Initialize theme when DOM is loaded
+document.addEventListener('DOMContentLoaded', initTheme);
+
+    // ======================
+    // Particles.js Configuration
+    // ======================
+    const particlesConfig = {
+        light: {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#3a86ff" },
+                shape: { type: "circle" },
+                opacity: {
+                    value: 0.8,
+                    random: false,
+                    anim: { enable: true, speed: 1, opacity_min: 0.3, sync: false }
+                },
+                size: {
+                    value: 4,
+                    random: true,
+                    anim: { enable: true, speed: 4, size_min: 1, sync: false }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 120,
+                    color: "#3a86ff",
+                    opacity: 0.4,
+                    width: 1.5
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                }
+            }
+        },
+        dark: {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#00F5FF" },
+                shape: { type: "circle" },
+                opacity: {
+                    value: 0.6,
+                    random: false,
+                    anim: { enable: true, speed: 1, opacity_min: 0.2, sync: false }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: { enable: true, speed: 4, size_min: 0.5, sync: false }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00F5FF",
+                    opacity: 0.3,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" }
+                }
+            }
+        }
+    };
+
+    // Initialize particles with current theme
+    function initParticles() {
+        const currentTheme = html.getAttribute('data-theme') || 'dark';
+        const config = particlesConfig[currentTheme];
         
-        // Update toggle icon state
-        updateToggleIcon(newTheme);
-    });
-    
-    function updateToggleIcon(theme) {
-        const moonIcon = themeToggle.querySelector('.fa-moon');
-        const sunIcon = themeToggle.querySelector('.fa-sun');
+        // Destroy existing instance if any
+        if (window.pJSDom && window.pJSDom.length > 0) {
+            pJSDom[0].pJS.fn.vendors.destroypJS();
+            pJSDom = [];
+        }
         
-        if (theme === 'dark') {
-            moonIcon.style.opacity = '0';
-            moonIcon.style.transform = 'rotate(90deg)';
-            sunIcon.style.opacity = '1';
-            sunIcon.style.transform = 'rotate(0deg)';
-        } else {
-            sunIcon.style.opacity = '0';
-            sunIcon.style.transform = 'rotate(90deg)';
-            moonIcon.style.opacity = '1';
-            moonIcon.style.transform = 'rotate(0deg)';
+        // Initialize new instance
+        if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
+            particlesJS('particles-js', config);
         }
     }
-    
-    // Initialize with dark mode icons
-    updateToggleIcon('dark');
 
+    // Initialize particles on load
+    initParticles();
+
+    // ======================
     // Mobile Menu Toggle
+    // ======================
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
     const closeMenu = document.querySelector('.close-menu');
     
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        document.body.style.overflow = 'hidden';
-    });
-    
-    closeMenu.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    });
-    
-    // Smooth Scrolling for Anchor Links
+    if (hamburger && mobileMenu && closeMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // ======================
+    // Smooth Scrolling
+    // ======================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -71,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 // Close mobile menu if open
-                if (mobileMenu.classList.contains('active')) {
+                if (mobileMenu && mobileMenu.classList.contains('active')) {
                     hamburger.classList.remove('active');
                     mobileMenu.classList.remove('active');
                     document.body.style.overflow = 'auto';
@@ -79,75 +210,48 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
+    // ======================
     // Back to Top Button
+    // ======================
     const backToTop = document.querySelector('.back-to-top');
-    
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
-    });
-    
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-    
-    // Header Scroll Effect
-    const header = document.querySelector('.header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-    
-    // Typing Animation
-    const typingText = document.querySelector('.typing-text');
-    const words = ['Custom Software', 'Mobile Apps', 'Web Solutions', 'AI Systems'];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let isEnd = false;
-    
-    function type() {
-        const currentWord = words[wordIndex];
-        const currentChar = currentWord.substring(0, charIndex);
-        
-        typingText.textContent = currentChar;
-        
-        if (!isDeleting && charIndex < currentWord.length) {
-            // Typing
-            charIndex++;
-            setTimeout(type, 100);
-        } else if (isDeleting && charIndex > 0) {
-            // Deleting
-            charIndex--;
-            setTimeout(type, 50);
-        } else {
-            // Change word
-            isDeleting = !isDeleting;
-            if (!isDeleting) {
-                wordIndex = (wordIndex + 1) % words.length;
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
             }
-            setTimeout(type, 1000);
-        }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
-    
-    // Start typing animation
-    setTimeout(type, 1000);
-    
-    // Animate Stats Counter
-    const statNumbers = document.querySelectorAll('.stat-number');
-    
+
+    // ======================
+    // Header Scroll Effect
+    // ======================
+    const header = document.querySelector('.header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
+
+    // ======================
+    // Stats Counter Animation
+    // ======================
     function animateStats() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
         statNumbers.forEach(stat => {
             const target = parseInt(stat.getAttribute('data-count'));
             const duration = 2000;
@@ -166,197 +270,93 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 16);
         });
     }
-    
-    // Initialize stats animation when in view
+
     const statsSection = document.querySelector('.hero-stats');
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateStats();
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    statsObserver.observe(statsSection);
-    
+    if (statsSection) {
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        statsObserver.observe(statsSection);
+    }
+
+    // ======================
     // Testimonial Slider
+    // ======================
     const testimonialTrack = document.querySelector('.testimonial-track');
     const testimonialCards = document.querySelectorAll('.testimonial-card');
     const prevBtn = document.querySelector('.slider-prev');
     const nextBtn = document.querySelector('.slider-next');
     const dotsContainer = document.querySelector('.slider-dots');
     
-    let currentIndex = 0;
-    const cardWidth = testimonialCards[0].offsetWidth + 32; // width + gap
-    
-    // Create dots
-    testimonialCards.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('slider-dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => {
-            goToSlide(index);
-        });
-        dotsContainer.appendChild(dot);
-    });
-    
-    function updateSlider() {
-        testimonialTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    if (testimonialTrack && testimonialCards.length > 0) {
+        let currentIndex = 0;
+        const cardWidth = testimonialCards[0].offsetWidth + 32;
         
-        // Update active dot
-        document.querySelectorAll('.slider-dot').forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
+        // Create dots
+        testimonialCards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('slider-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+            });
+            dotsContainer.appendChild(dot);
+        });
+        
+        function updateSlider() {
+            testimonialTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            
+            document.querySelectorAll('.slider-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+        }
+        
+        function nextSlide() {
+            if (currentIndex < testimonialCards.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateSlider();
+        }
+        
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = testimonialCards.length - 1;
+            }
+            updateSlider();
+        }
+        
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        
+        let slideInterval = setInterval(nextSlide, 5000);
+        
+        testimonialTrack.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        testimonialTrack.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextSlide, 5000);
         });
     }
-    
-    function goToSlide(index) {
-        currentIndex = index;
-        updateSlider();
-    }
-    
-    function nextSlide() {
-        if (currentIndex < testimonialCards.length - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
-        updateSlider();
-    }
-    
-    function prevSlide() {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = testimonialCards.length - 1;
-        }
-        updateSlider();
-    }
-    
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-    
-    // Auto slide
-    let slideInterval = setInterval(nextSlide, 5000);
-    
-    testimonialTrack.addEventListener('mouseenter', () => {
-        clearInterval(slideInterval);
-    });
-    
-    testimonialTrack.addEventListener('mouseleave', () => {
-        slideInterval = setInterval(nextSlide, 5000);
-    });
-    
-    // Initialize Particles.js
-    if (typeof particlesJS !== 'undefined') {
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#00F5FF"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#00F5FF",
-                    "opacity": 0.2,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    }
-    
+
+    // ======================
     // Service Card Hover Effect
+    // ======================
     const serviceCards = document.querySelectorAll('.service-card');
     
     serviceCards.forEach(card => {
@@ -370,42 +370,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-// Animate Stats Counter
-function animateStats() {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    
-    statNumbers.forEach(stat => {
-        const target = parseInt(stat.getAttribute('data-count'));
-        const duration = 2000;
-        const start = 0;
-        const increment = target / (duration / 16);
-        let current = start;
-        
-        const timer = setInterval(() => {
-            current += increment;
-            stat.textContent = Math.floor(current);
-            
-            if (current >= target) {
-                stat.textContent = target;
-                clearInterval(timer);
-            }
-        }, 16);
-    });
-}
-
-// Initialize stats animation when in view
-const statsSection = document.querySelector('.featured-project');
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateStats();
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-if (statsSection) {
-    statsObserver.observe(statsSection);
-}
 
