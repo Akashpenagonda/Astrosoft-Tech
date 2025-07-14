@@ -12,12 +12,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
     <script>
-        // Apply theme before page renders to prevent flash
-        (function () {
-            const savedTheme = localStorage.getItem('theme') ||
-                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
+        // Force dark mode for all browsers - no checks or conditions
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); // Also save to localStorage
     </script>
 </head>
 <body>
@@ -460,15 +457,7 @@
     <script src="js/animations.js"></script>
 
 
-    <script>
-        // Apply theme before page renders to prevent flash
-        (function () {
-            const savedTheme = localStorage.getItem('theme') ||
-                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
-
+    
 </body>
 
 </html>
