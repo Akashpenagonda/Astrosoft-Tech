@@ -43,6 +43,7 @@ themeToggle.addEventListener('click', () => {
   const currentTheme = html.getAttribute('data-theme');
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
   
+  
   // Update the theme
   html.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);

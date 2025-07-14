@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
     <script>
-        // Force dark mode for all browsers - no checks or conditions
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark'); // Also save to localStorage
+          // Initialize with dark theme by default, but respect localStorage if set
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
 </head>
 <body>
